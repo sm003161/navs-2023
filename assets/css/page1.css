@@ -1,0 +1,238 @@
+.container-page > .top-header > ul {
+ width: 100%;
+ max-width: var(--main-width);
+ display: flex;
+ justify-content: center;
+ margin: 0 auto;
+ padding: 0.5rem;
+ font-size: 1.7rem;
+}
+
+.container-page > .top-header > ul > li {
+ width: 3rem;
+ height: 3rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 4rem;
+}
+
+.container-page > .top-header > ul > li > button {
+  font-size: 2rem;
+  padding: 0;
+  color: #333;
+}
+
+.container-page > .top-header > ul > li > div.tooltip-container > p.tooltip {
+ display: none;
+}
+
+.container-page > .top-header > ul > li.hamburger {
+ margin-right: auto;
+}
+
+.container-page > .search-area {
+ display: flex;
+ justify-content: center;
+ padding: 0 1rem;
+}
+
+.container-page > .search-area > .search-bar {
+ border: #333 solid 1px;
+ width: 100%;
+ border-radius: 100px;
+ display: flex;
+ align-items: center;
+ flex-wrap: nowrap;
+ padding: 0.4rem 1.6rem;
+ gap: 1rem;
+ position: relative;
+}
+
+.container-page > .search-area > .search-bar > a.logo {
+ font-weight: 900;
+ font-size: 2.5rem;
+}
+
+.container-page > .search-area > .search-bar > form {
+ display: grid;
+ grid-template-columns: 1fr 1.5rem;
+ gap: 1rem;
+ width: 100%;
+}
+
+.container-page > .search-area > .search-bar > form > input {
+ border: none;
+ width: 100%;
+}
+
+.container-page > .search-area > .search-bar > form > input:focus-visible {
+ outline: none;
+}
+
+.container-page > .search-area > .search-bar > form > input::placeholder {
+ letter-spacing: -1px;
+ color: #aaa;
+}
+
+.container-page > .search-area > .search-bar > form > * {
+ font-size: 1.3rem;
+}
+
+.container-page > .search-area > .search-bar > form > button {
+ color: #333;
+ font-size: 1.5rem;
+ padding: 0;
+}
+
+.container-page > .search-area > .search-bar > span.search-group {
+ display: none;
+}
+
+.container-page > .shortcuts-menu > ul {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ width: 100%;
+ padding: 1.5rem;
+ max-width: 381px;
+ gap: 1.5rem;
+ margin: 15px auto 30px auto;
+ text-align: center;
+}
+
+.container-page > .shortcuts-menu > ul > li > a > .shortcut-menu__icon {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ font-weight: 500;
+}
+
+.container-page > .search-area > .search-bar:hover,
+.container-page > .shortcuts-menu > ul > li > a > .shortcut-menu__icon > i:hover {
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
+}
+
+.container-page > .shortcuts-menu > ul > li > a > .shortcut-menu__icon > i {
+ font-size: 2rem;
+ height: 50px;
+ width: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 15px;
+ border: 0.5px solid #fafafa;
+ box-shadow: 0 0 3px rgba(0, 0, 0, 0.147);
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+ .container-page > .top-header > ul {
+   padding: 1.5rem;
+   position: relative;
+ }
+
+ .container-page > .top-header > ul > li {
+   width: 3.3rem;
+   height: 3.3rem;
+   flex-wrap: wrap;
+   position: relative;
+ }
+
+ .container-page > .top-header > ul > li:hover {
+   background-color: #efefef;
+   border-radius: 100%;
+ }
+
+ .container-page > .top-header > ul > li:hover > div.tooltip-container::after {
+  width: 20px;
+  height: 12px;
+  content: "";
+  position: absolute;
+  transform: translate(-50%, 55%);
+  left: 50%;
+  top: 100%;
+  background-image: url("../icons/page1-icons.png");
+  background-position: -166px -114px;
+  background-size: 422px 405px;
+  background-repeat: no-repeat;
+ }
+  
+ .container-page > .top-header > ul > li:hover > div.tooltip-container > p.tooltip {
+  position: absolute;
+  display: block;
+  margin-top: 5px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  white-space: nowrap;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 100px;
+  font-size: 1rem;
+  background-color: white;
+ }
+  
+ .container-page > .search-area > .search-bar {
+  max-width: 650px;
+  padding: 0.5rem 2rem;
+ }
+
+ .container-page > .search-area > .search-bar > form {
+  gap: 6rem;
+ }
+
+ .container-page > .search-area > .search-bar > form > input::placeholder {
+  color: #FFF;
+ }
+
+ .container-page > .search-area > .search-bar > form > input:focus-visible::placeholder {
+  color: #CCC;
+ }
+ 
+ .container-page > .search-area > .search-bar > form > *,
+ .container-page > .search-area > .search-bar > span.search-group > span.search-tools > * {
+  font-size: 1.5rem;
+  padding: 0 6px;
+ }
+ 
+ .container-page > .search-area > .search-bar > span.search-group {
+  display: block;
+  position: absolute;
+  right: 67px;
+ }
+ 
+ .container-page > .search-area > .search-bar > span.search-group > span.search-tools > .typing-resources {
+  color: #aaa;
+ }
+ 
+ .container-page > .search-area > .search-bar > span.search-group > span.search-tools > .typing-resources:hover {
+  color: #777;
+ }
+
+ .container-page > .search-area > .search-bar > span.search-group > span.search-tools > .auto-complete::before {
+  content:"";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 44%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+  border-radius: 5px;
+  margin: 0;
+ }
+
+ .container-page > .shortcuts-menu > ul {
+   gap: 1rem;
+   max-width: initial;
+ }
+
+ .container-page > .shortcuts-menu > ul > li > a > .shortcut-menu__icon > i {
+   height: 45px;
+   width: 45px;
+ }
+}
