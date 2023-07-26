@@ -10,7 +10,7 @@
  <!-- 상단메뉴 -->
   <div class="top-bar">
    <div class="top-bar-cont">
-    <p>이 누리집은 키자이의 비공식 전자정부 누리집입니다.</p>
+    <span>이 누리집은 키자이의 비공식 전자정부 누리집입니다.</span>
     <nav class="pc-only" aria-label="탑 메뉴">
      <ul aria-label="탑 메뉴">
       <li>
@@ -165,7 +165,7 @@
    <div class="header-cont">
     <a href="page2.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
 
-    <div class="gnb-cont pc-only">
+    <div class="gnb-pc-cont pc-only">
      <nav aria-label="상단 대메뉴" class="gnb-pc">
       <ul>
        <li>
