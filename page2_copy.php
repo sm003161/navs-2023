@@ -5,7 +5,7 @@
 <?php
  include("header_page.php");
 ?>
- <section class="container container-page">
+ <section class="container container-page gnb-cont-mo">
 
  <!-- 상단메뉴 -->
   <div class="top-bar">
@@ -38,13 +38,109 @@
    </div>
   </div>
 
- <!-- gnb -->
+
+ <!-- 모바일 gnb -->
+  <section class="gnb-menu-mo mo-only">
+   <div class="gnb-menu-mo__top">
+    <a href="" class="arrow-right--black">
+     <i class="fa-regular fa-user" aria-hidden="true"></i> <strong>로그인</strong>을 해주세요
+    </a>
+    <button type="button"><i class="fa-solid fa-xmark"></i></button>
+   </div>
+   <div class="gnb-menu-verify">
+    <button type="button"><i class="fa-solid fa-lock"></i> 인증서등록</button>
+    <button type="button"><i class="fa-solid fa-fingerprint"></i> 간편번호/지문등록</button>
+   </div>
+
+   <nav class="gnb-menu-nav">
+    <ul>
+     <li>
+      <button type="button" class="gnb-menu-list border-gray--bottom">
+       <i class="fa-solid fa-gear"></i>
+       <span> MyGOV</span>
+       <span class="arrow-down--black"></span>
+      </button>
+      <ul>
+       <li><a href="">MyGOV 홈</a></li>
+       <li><a href="" class="arrow-down--black">나의 신청내역</a></li>
+       <li><a href="">나의 생활정보</a></li>
+       <li><a href="" class="arrow-down--black">나의 정보관리</a></li>
+      </ul>
+     </li>
+     <li>
+      <button type="button" class="gnb-menu-list border-gray--bottom">
+       <i class="fa-regular fa-folder-open"></i>
+       <span> 서비스</span>
+       <span class="arrow-down--black"></span>
+      </button>
+      <ul>
+       <li><a href="">신청·조회·발급</a></li>
+       <li><a href="">사실/진위 확인</a></li>
+       <li><a href="">분야별 서비스</a></li>
+       <li><a href="">기업/단체 서비스</a></li>
+       <li><a href="" class="with-link--black">돌봄시설 등 위치 찾기</a></li>
+      </ul>
+     </li>
+     <li>
+      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <i class="fa-solid fa-gift"></i>
+      <span> 보조금24</span>
+      <span class="arrow-down--black"></span>
+     </button>
+     </li>
+     <li>
+      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <i class="fa-solid fa-file-invoice"></i>
+      <span> 정책정보</span>
+      <span class="arrow-down--black"></span>
+     </button>
+     </li>
+     <li>
+      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <i class="fa-solid fa-comment-dots"></i>
+      <span> 고객센터</span>
+      <span class="arrow-down--black"></span>
+     </button>
+     </li>
+     <li>
+      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <i class="fa-solid fa-key"></i>
+      <span> 인증센터</span>
+      <span class="arrow-down--black"></span>
+     </button>
+     </li>
+     <li>
+      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span> 보안센터</span>
+      <span class="arrow-down--black"></span>
+     </button>
+    </li>
+   </ul>
+  </nav>
+  
+  <div class="gnb-menu-bottom">
+   <ul>
+    <li>
+     <a href="" class="border-gray--bottom">정부24 소개</a>
+     <span class="arrow-right--black"></span>
+    </li>
+    <li>
+     <a href="">전자증명서·공공마이데이터</a>
+     <span class="arrow-right--black"></span>
+    </li>
+    </ul>
+   </div>
+  </section>
+
+
+ <!-- PC gnb -->
   <header class="border-gray--bottom">
    <div class="header-cont">
     <a href="page2.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
 
-    <div class="gnb-cont"-pc-only>
-     <nav aria-label="상단 대메뉴" class="gnb-menu-pc pc-only">
+    <div class="gnb-cont pc-only">
+     <nav aria-label="상단 대메뉴" class="gnb-menu-pc">
       <ul>
        <li>
         <button type="button" aria-label="마이페이지 보기">MyGOV</button>
@@ -106,55 +202,6 @@
        </li>
       </ul>
      </nav>
-
-     <section class="gnb-menu-mo mo-only">
-      <div class="gnb-menu-mo__top">
-       <a href="" class="arrow-right--black">
-        <i class="fa-regular fa-user" aria-hidden="true"></i> <strong>로그인</strong>을 해주세요
-       </a>
-       <button type="button"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="gnb-menu-verify">
-       <button type="button"><i class="fa-solid fa-lock"></i> 인증서등록</button>
-       <button type="button"><i class="fa-solid fa-fingerprint"></i> 간편번호/지문등록</button>
-      </div>
-
-      <nav class="gnb-menu-nav">
-       <ul>
-        <li>
-         <button type="button" class="arrow-down--black"><i class="fa-solid fa-gear"></i> MyGOV</button>
-         <ul>
-          <li><a href="">MyGOV 홈</a></li>
-          <li><a href="" class="arrow-down--black">나의 신청내역</a></li>
-          <li><a href="">나의 생활정보</a></li>
-          <li><a href="" class="arrow-down--black">나의 정보관리</a></li>
-         </ul>
-        </li>
-        <li>
-         <button type="button" class="arrow-down--black"><i class="fa-regular fa-folder-open"></i> 서비스</button>
-         <ul>
-          <li><a href="">신청·조회·발급</a></li>
-          <li><a href="">사실/진위 확인</a></li>
-          <li><a href="">분야별 서비스</a></li>
-          <li><a href="">기업/단체 서비스</a></li>
-          <li><a href="" class="with-link--black">돌봄시설 등 위치 찾기</a></li>
-         </ul>
-        </li>
-        <li><button type="button" class="arrow-down--black"><i class="fa-solid fa-gift"></i> 보조금24</button></li>
-        <li><button type="button" class="arrow-down--black"><i class="fa-solid fa-file-invoice"></i> 정책정보</button></li>
-        <li><button type="button" class="arrow-down--black"><i class="fa-solid fa-comment-dots"></i> 고객센터</button></li>
-        <li><button type="button" class="arrow-down--black"><i class="fa-solid fa-key"></i> 인증센터</button></li>
-        <li><button type="button" class="arrow-down--black"><i class="fa-solid fa-shield-halved"></i> 보안센터</button></li>
-       </ul>
-      </nav>
-
-      <div class="gnb-menu-bottom">
-       <ul>
-        <li><a href="" class="arrow-right--black">정부24 소개</a></li>
-        <li><a href="" class="arrow-right--black">전자증명서·공공마이데이터</a></li>
-       </ul>
-      </div>
-     </section>
 
     </div>
     
