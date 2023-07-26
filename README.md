@@ -17,3 +17,25 @@
 - width / height 설정하기
 - background-image 불러와 position, sizem repeat 설정해주기
 - position absolute, left / top 으로 위치 위치 잡아주기
+
+# 230726
+
+## js basic
+
+### 1. eventListner
+
+대상에 대한 event 를 기준으로 function 을 실행하는 함수
+
+```js
+// 대상.eventListener("이벤트", "function 이름")
+element.eventListener("click", beHappy);
+```
+
+### 2. style.property
+
+대상의 CSS를 수정하는 함수
+
+```js
+// 대상.style.property = "value"
+element.style.display = "flex";
+```

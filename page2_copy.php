@@ -40,77 +40,99 @@
 
 
  <!-- 모바일 gnb -->
-  <section class="gnb-menu-mo mo-only">
-   <div class="gnb-menu-mo__top">
-    <a href="" class="arrow-right--black">
+  <section class="gnb-mo mo-only">
+   <div class="gnb-mo__top">
+    <a href="#" class="arrow-right--black">
      <i class="fa-regular fa-user" aria-hidden="true"></i> <strong>로그인</strong>을 해주세요
     </a>
-    <button type="button"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" class="moHamburgerClose"><i class="fa-solid fa-xmark"></i></button>
    </div>
-   <div class="gnb-menu-verify">
+   <div class="gnb-mo__verify">
     <button type="button"><i class="fa-solid fa-lock"></i> 인증서등록</button>
     <button type="button"><i class="fa-solid fa-fingerprint"></i> 간편번호/지문등록</button>
    </div>
 
-   <nav class="gnb-menu-nav">
+   <nav class="gnb-mo__list">
     <ul>
      <li>
-      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <button type="button" class="gnb-1dth border-gray--bottom" onclick="gnbOpen11()">
        <i class="fa-solid fa-gear"></i>
        <span> MyGOV</span>
        <span class="arrow-down--black"></span>
       </button>
-      <ul>
-       <li><a href="">MyGOV 홈</a></li>
-       <li><a href="" class="arrow-down--black">나의 신청내역</a></li>
-       <li><a href="">나의 생활정보</a></li>
-       <li><a href="" class="arrow-down--black">나의 정보관리</a></li>
+      <ul class="gnb-2dth" id="gnb-2dth-1">
+       <li><a href="#">MyGOV 홈</a></li>
+       <li>
+        <a href="javascript:void(0);" onclick="gnbOpen21()">
+         <span>나의 신청내역</span>
+         <span class="arrow-down--black"></span>
+        </a>
+        <ul class="gnb-3dth" id="gnb-3dth-1">
+         <li><a href="#">서비스 신청내역</a></li>
+         <li><a href="#">온종일돌봄 신청내역</a></li>
+         <li><a href="#">환불정보조회</a></li>
+        </ul>
+       </li>
+       <li><a href="#">나의 생활정보</a></li>
+       <li>
+        <a href="javascript:void(0);" onclick="gnbOpen22()">
+         <span>나의 정보관리</span>
+         <span class="arrow-down--black"></span>
+        </a>
+        <ul class="gnb-3dth" id="gnb-3dth-2">
+         <li><a href="#">회원 정보</a></li>
+         <li><a href="#">서비스 이용동의</a></li>
+         <li><a href="#">즐겨찾는 서비스 설정</a></li>
+         <li><a href="#">알림 수신동의</a></li>
+         <li><a href="#">회원탈퇴</a></li>
+        </ul>
+       </li>
       </ul>
      </li>
      <li>
-      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <button type="button" class="gnb-1dth border-gray--bottom" onclick="gnbOpen12()">
        <i class="fa-regular fa-folder-open"></i>
        <span> 서비스</span>
        <span class="arrow-down--black"></span>
       </button>
-      <ul>
-       <li><a href="">신청·조회·발급</a></li>
-       <li><a href="">사실/진위 확인</a></li>
-       <li><a href="">분야별 서비스</a></li>
-       <li><a href="">기업/단체 서비스</a></li>
-       <li><a href="" class="with-link--black">돌봄시설 등 위치 찾기</a></li>
+      <ul class="gnb-2dth" id="gnb-2dth-2">
+       <li><a href="#">신청·조회·발급</a></li>
+       <li><a href="#">사실/진위 확인</a></li>
+       <li><a href="#">분야별 서비스</a></li>
+       <li><a href="#">기업/단체 서비스</a></li>
+       <li><a href="#" class="with-link--black">돌봄시설 등 위치 찾기</a></li>
       </ul>
      </li>
      <li>
-      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <button type="button" class="gnb-1dth border-gray--bottom">
       <i class="fa-solid fa-gift"></i>
       <span> 보조금24</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
-      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <button type="button" class="gnb-1dth border-gray--bottom">
       <i class="fa-solid fa-file-invoice"></i>
       <span> 정책정보</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
-      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <button type="button" class="gnb-1dth border-gray--bottom">
       <i class="fa-solid fa-comment-dots"></i>
       <span> 고객센터</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
-      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <button type="button" class="gnb-1dth border-gray--bottom">
       <i class="fa-solid fa-key"></i>
       <span> 인증센터</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
-      <button type="button" class="gnb-menu-list border-gray--bottom">
+      <button type="button" class="gnb-1dth border-gray--bottom">
       <i class="fa-solid fa-shield-halved"></i>
       <span> 보안센터</span>
       <span class="arrow-down--black"></span>
@@ -119,15 +141,19 @@
    </ul>
   </nav>
   
-  <div class="gnb-menu-bottom">
+  <div class="gnb-bottom">
    <ul>
     <li>
-     <a href="" class="border-gray--bottom">정부24 소개</a>
+     <a href="#" class="border-gray--bottom">
+      <span>정부24 소개
      <span class="arrow-right--black"></span>
+     </a>
     </li>
     <li>
-     <a href="">전자증명서·공공마이데이터</a>
+     <a href="#">
+      <span>전자증명서·공공마이데이터
      <span class="arrow-right--black"></span>
+     </a>
     </li>
     </ul>
    </div>
@@ -140,44 +166,44 @@
     <a href="page2.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
 
     <div class="gnb-cont pc-only">
-     <nav aria-label="상단 대메뉴" class="gnb-menu-pc">
+     <nav aria-label="상단 대메뉴" class="gnb-pc">
       <ul>
        <li>
         <button type="button" aria-label="마이페이지 보기">MyGOV</button>
 
-       <section class="gnb-menu__open hidden">
-        <div class="gnb-menu__open-contents">
+       <section class="gnb__open hidden">
+        <div class="gnb__open-contents">
          
-         <aside class="gnb-menu__open__intro">
+         <aside class="gnb__open__intro">
           <div>
            <i class="fa-solid fa-gear" aria-hidden="true"></i>
           </div>
-          <dl class="gnb-menu__open__desc">
+          <dl class="gnb__open__desc">
            <dt>MyGOV</dt>
            <dd>서비스 신청현황, 생활 정보 확인 및 회원정보 설정을 할 수 있어요.</dd>
           </dl>
          </aside>
 
-         <section class="gnb-menu__2depth">
+         <section class="gnb__2depth">
           <ul>
            <li>
-            <button type="button" class="gnb-menu__2depth-title">MyGOV 홈</button>
-            <p class="gnb-menu__2depth-desc">생활정보 내역, 서비스 신청내역, 나의 혜택 요약 정보를 한 눈에 확인할 수 있어요.</p>
+            <button type="button" class="gnb__2depth-title">MyGOV 홈</button>
+            <p class="gnb__2depth-desc">생활정보 내역, 서비스 신청내역, 나의 혜택 요약 정보를 한 눈에 확인할 수 있어요.</p>
            </li>
            
            <li>
-            <button type="button" class="gnb-menu__2depth-title arrow-down--black">나의 신청내역</button>
-            <p class="gnb-menu__2depth-desc">신청한 각종 서비스의 신청접수부터 처리결과까지 확인 가능해요.</p>
+            <button type="button" class="gnb__2depth-title arrow-down--black">나의 신청내역</button>
+            <p class="gnb__2depth-desc">신청한 각종 서비스의 신청접수부터 처리결과까지 확인 가능해요.</p>
            </li>
            
            <li>
-            <button type="button" class="gnb-menu__2depth-title">MyGOV 홈</button>
-            <p class="gnb-menu__2depth-desc">생활정보 내역, 서비스 신청내역, 나의 혜택 요약 정보를 한 눈에 확인할 수 있어요.</p>
+            <button type="button" class="gnb__2depth-title">MyGOV 홈</button>
+            <p class="gnb__2depth-desc">생활정보 내역, 서비스 신청내역, 나의 혜택 요약 정보를 한 눈에 확인할 수 있어요.</p>
            </li>
            
            <li>
-            <button type="button" class="gnb-menu__2depth-title arrow-down--black">나의 신청내역</button>
-            <p class="gnb-menu__2depth-desc">신청한 각종 서비스의 신청접수부터 처리결과까지 확인 가능해요.</p>
+            <button type="button" class="gnb__2depth-title arrow-down--black">나의 신청내역</button>
+            <p class="gnb__2depth-desc">신청한 각종 서비스의 신청접수부터 처리결과까지 확인 가능해요.</p>
            </li>
           </ul>
          </section>
@@ -206,7 +232,7 @@
     </div>
     
     <div class="header__btn header__btn--left">
-     <button type="button" aria-label="모바일 전체 메뉴 보기" class="mo-only"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+     <button type="button" aria-label="모바일 전체 메뉴 보기" class="mo-only moHamberger"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
     </div>
 
     <div class="header__btn header__btn--right">
