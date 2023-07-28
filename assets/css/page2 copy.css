@@ -78,6 +78,10 @@
 
 
 /* 모바일 */
+body.body--fixed {
+ overflow: hidden;
+}
+
 .top-bar {
  background-color: #666;
 }
@@ -127,6 +131,11 @@ font-size: 2rem;
  height: 100vh;
  z-index: 4;
  display: none;
+ overflow-y: scroll;
+}
+
+.gnb-cont-mo > .gnb-mo.open {
+ display: block;
 }
 
 .gnb-cont-mo > .gnb-mo i {
@@ -224,7 +233,7 @@ font-size: 2rem;
 
 .gnb-cont-mo > .gnb-mo > .gnb-bottom {
  display: block;
- margin-top: 2rem;
+ margin: 2rem 0;
  background-color: #f6f6f6;
  font-size: 1.3rem;
 }

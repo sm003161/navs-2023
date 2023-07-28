@@ -1,42 +1,44 @@
-/*
-const breakPoint = "1280";
-const nav = document.querySelectorAll("nav.hidden-mo");
-
-function checkMobile() {
- if (window.screen.width > breakPoint) {
-  console.log("PC");
-  // 콘솔에 기기 표시
-  nav.classList.remove("hidden-mo");
-
-  // hiddem-mo 클래스 제거
- } else {
-   console.log("Mobile");
-  };
-}
-
-
-checkMobile();
-*/
-
-// 모바일 햄버거 메뉴 열기
+/* 모바일 햄버거 컨트롤 */
 const moHamberger = document.querySelector(".moHamberger");
 const moGnbMenu = document.querySelector(".gnb-mo");
+const body = document.querySelector("body");
+const moHamburgerClose = document.querySelector(".moHamburgerClose");
 
+/*
+// 메뉴 열기 V1
 function openMoGnb() {
  moGnbMenu.style.display = "initial";
+ moGnbMenu.classList.add("moGnbActive");
 }
 
 moHamberger.addEventListener("click", openMoGnb)
+*/
 
-
-// 모바일 햄버거 메뉴 닫기
-const moHamburgerClose = document.querySelector(".moHamburgerClose");
+/*
+// 메뉴 닫기 V2
 
 function closeMoGnb() {
  moGnbMenu.style.display = "none";
+ moGnbMenu.classList.remove("moGnbActive");
 }
 
 moHamburgerClose.addEventListener("click", closeMoGnb)
+*/
+
+// 메뉴 열고 닫기 V2
+function toggleMoGnb() {
+ moGnbMenu.classList.toggle("open");
+
+ fixBody();
+}
+
+function fixBody() {
+ if( moGnbMenu.classList.contains("open") ) {
+  body.classList.add("body--fixed");
+ } else {
+  body.classList.remove("body--fixed");
+ }
+}
 
 
 // 모바일 gnb 11depth 열기
@@ -68,3 +70,7 @@ function gnbOpen22() {
  moGnb32.classList.toggle("active");
  // console.log(moGnb22.style.display);
 }
+
+// eventListner 모아보기
+moHamberger.addEventListener("click", toggleMoGnb);
+moHamburgerClose.addEventListener("click", toggleMoGnb);

@@ -163,7 +163,7 @@
  <!-- PC gnb -->
   <header class="border-gray--bottom">
    <div class="header-cont">
-    <a href="page2.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
+    <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
 
     <div class="gnb-pc-cont pc-only">
      <nav aria-label="상단 대메뉴" class="gnb-pc">
