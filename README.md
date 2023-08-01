@@ -57,19 +57,6 @@ default = parseFloat(default);
 default = 100;
 ```
 
-### 3. nextElementSibling
-
-특정 element 의 바로 다음 형제 노드를 찾는 속성
-
-```js
-// [ 기준 element ] 찾기
-const olderBro = document.querySelector("#olderBro");
-
-// 형제 노드 찾기
-// [ 기준 element ].nextElementSibling
-const youngerBro = olderBro.nextElementSibling;
-```
-
 ### 2. function A(B)
 
 클릭한 element 의 id 값을 쉽게 찾기
@@ -94,4 +81,17 @@ const youngerBro = olderBro.nextElementSibling;
   alert(you);
  }
 </script>
+```
+
+### 3. nextElementSibling
+
+특정 element 의 바로 다음 형제 노드를 찾는 속성
+
+```js
+// [ 기준 element ] 찾기
+const olderBro = document.querySelector("#olderBro");
+
+// 형제 노드 찾기
+// [ 기준 element ].nextElementSibling
+const youngerBro = olderBro.nextElementSibling;
 ```
