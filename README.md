@@ -27,8 +27,8 @@
 대상에 대한 event 를 기준으로 function 을 실행하기
 
 ```js
-// 대상.eventListener("이벤트", "function 이름")
-element.eventListener("click", beHappy);
+// [ 대상 ].eventListener("이벤트", [ function 이름 ])
+heyKi.eventListener("click", beHappy);
 ```
 
 ### 2. style.property
@@ -36,7 +36,7 @@ element.eventListener("click", beHappy);
 대상의 CSS를 수정하기
 
 ```js
-// 대상.style.property = "value"
+// [ 대상 ].style.property = "value"
 element.style.display = "flex";
 ```
 
@@ -49,10 +49,49 @@ element.style.display = "flex";
 string 에서 문자를 제거한 후 number 로 변환하는 함수
 
 ```js
-// parseFloat(대상);
+// parseFloat([대상]);
 let default = '100%';
 default = parseFloat(default);
 
-// default 는 숫자 100으로 변환됨
+// 이 경우 default 는 숫자 100 으로 변환됨
 default = 100;
+```
+
+### 3. nextElementSibling
+
+특정 element 의 바로 다음 형제 노드를 찾는 속성
+
+```js
+// [ 기준 element ] 찾기
+const olderBro = document.querySelector("#olderBro");
+
+// 형제 노드 찾기
+// [ 기준 element ].nextElementSibling
+const youngerBro = olderBro.nextElementSibling;
+```
+
+### 2. function A(B)
+
+클릭한 element 의 id 값을 쉽게 찾기
+
+```html
+<body>
+ <!-- button 클릭 시 beHappy 를 실행하기 -->
+ <button onclick="beHappy1()" id="heyKi1"></button>
+
+ <!-- button 클릭 시 beHappy 를 실행하기 + id 를 인자로 넘겨주기 -->
+ <button onclick="beHappy2(this.id)" id="heyKi2"></button>
+</body>
+
+<script>
+ // 단순 beHappy1 함수 실행
+ function beHappy1() {
+  alert();
+ }
+
+ // 인자인 you ( heyKi2 ) 를 가지고 beHappy2 함수 실행
+ function beHappy2(you) {
+  alert(you);
+ }
+</script>
 ```
