@@ -14,8 +14,8 @@
     <nav class="pc-only" aria-label="탑 메뉴">
      <ul aria-label="탑 메뉴">
       <li>
-       <button type="button" class="top-bar__list arrow-down--white" aria-label="switch language">for foreigner</button>
-       <ul class="top-bar__list__lang hidden">
+       <button type="button" class="top-bar__list arrow-down--white" id="language-btn" aria-label="switch language">for foreigner</button>
+       <ul class="top-bar__list__lang" id="lang-list">
         <li><a href="#" class="with-link--black">Korean</a></li>
         <li><a href="#" class="with-link--black">ENG</a></li>
         <li><a href="#" class="with-link--black">中文</a></li>
@@ -28,9 +28,9 @@
       <li>
        화면크기
         <span class="top-bar__list__zoom-button">
-         <button type="button" aria-label="글씨 줄이기"></button>
-         <button type="button" aria-label="글씨 100%">100%</button>
-         <button type="button" aria-label="글씨 키우기"></button>
+         <button id="fontSizeSmBtn" type="button" aria-label="글씨 줄이기"></button>
+         <button id="fontSizeDftBtn" type="button" aria-label="글씨 100%">100%</button>
+         <button id="fontSizeLgBtn" type="button" aria-label="글씨 키우기"></button>
         </span>
       </li>
      </ul>
@@ -45,7 +45,7 @@
     <a href="#" class="arrow-right--black">
      <i class="fa-regular fa-user" aria-hidden="true"></i> <strong>로그인</strong>을 해주세요
     </a>
-    <button type="button" class="moHamburgerClose"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" id="moHamburgerClose"><i class="fa-solid fa-xmark"></i></button>
    </div>
    <div class="gnb-mo__verify">
     <button type="button"><i class="fa-solid fa-lock"></i> 인증서등록</button>
@@ -232,7 +232,7 @@
     </div>
     
     <div class="header__btn header__btn--left">
-     <button type="button" aria-label="모바일 전체 메뉴 보기" class="mo-only moHamberger"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+     <button type="button" aria-label="모바일 전체 메뉴 보기" class="mo-only"  id="moHamberger"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
     </div>
 
     <div class="header__btn header__btn--right">

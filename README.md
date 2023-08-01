@@ -24,7 +24,7 @@
 
 ### 1. eventListner
 
-대상에 대한 event 를 기준으로 function 을 실행하는 함수
+대상에 대한 event 를 기준으로 function 을 실행하기
 
 ```js
 // 대상.eventListener("이벤트", "function 이름")
@@ -33,7 +33,7 @@ element.eventListener("click", beHappy);
 
 ### 2. style.property
 
-대상의 CSS를 수정하는 함수
+대상의 CSS를 수정하기
 
 ```js
 // 대상.style.property = "value"

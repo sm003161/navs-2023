@@ -57,6 +57,7 @@ button {
 	letter-spacing: -1px;
  color: #333;
  padding: 0;
+ vertical-align: middle;
 }
 
 a {

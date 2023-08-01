@@ -1,8 +1,8 @@
 /* 모바일 햄버거 컨트롤 */
-const moHamberger = document.querySelector(".moHamberger");
+const moHamberger = document.querySelector("#moHamberger");
 const moGnbMenu = document.querySelector(".gnb-mo");
 const body = document.querySelector("body");
-const moHamburgerClose = document.querySelector(".moHamburgerClose");
+const moHamburgerClose = document.querySelector("#moHamburgerClose");
 
 /*
 // 메뉴 열기 V1
@@ -41,7 +41,9 @@ function fixBody() {
 }
 
 
-// 모바일 gnb 11depth 열기
+
+
+// 모바일 gnb 컨트롤
 const moGnb21 = document.querySelector("#gnb-2dth-1");
 const moGnb22 = document.querySelector("#gnb-2dth-2");
 const moGnb31 = document.querySelector("#gnb-3dth-1");
@@ -71,6 +73,94 @@ function gnbOpen22() {
  // console.log(moGnb22.style.display);
 }
 
-// eventListner 모아보기
+
+
+
+
+
+// PC 언어선택하기
+const langBtn = document.querySelector("#language-btn");
+const langList = document.querySelector("#lang-list");
+
+function switchLang() {
+ langList.classList.toggle("active");
+}
+
+
+
+
+
+
+
+// PC 배율 컨트롤
+const fontSizeSmBtn = document.querySelector("#fontSizeSmBtn");
+const fontSizeDftBtn = document.querySelector("#fontSizeDftBtn");
+const fontSizeLgBtn = document.querySelector("#fontSizeLgBtn");
+const fontSizeBasic = 100;
+const fontSizeUnit = 5;
+let currentFontSize = fontSizeBasic;
+
+/*
+function getCurrentFontSize() {
+ console.log(parseFloat(currentFontSize));
+ return parseFloat(currentFontSize);
+}
+*/
+
+// 줌 축소 버튼 클릭
+function fontSizeSmaller() {
+ currentFontSize = parseFloat(currentFontSize);
+
+ if (currentFontSize > 90) {
+ currentFontSize = currentFontSize - fontSizeUnit;
+
+ setZoomSize();
+ } else {
+  alert("더 이상 축소할 수 없어요.");
+ }
+}
+
+// 줌 100% 버튼 클릭
+function fontSizeDefault() {
+ if (currentFontSize != fontSizeBasic) {
+  currentFontSize = fontSizeBasic;
+
+  setZoomSize();
+ }
+}
+
+// 줌 확대 버튼 클릭
+function fontSizeLarger() {
+ currentFontSize = parseFloat(currentFontSize);
+
+ if (currentFontSize < 110) {
+  currentFontSize = currentFontSize + fontSizeUnit;
+ 
+  setZoomSize();
+  } else {
+   alert("더 이상 확대할 수 없어요.");
+  }
+ }
+ 
+ // 줌 적용
+ function setZoomSize() {
+  body.style.zoom = currentFontSize + '%' ;
+  fontSizeDftBtn.innerHTML = currentFontSize + '%';
+ }
+
+
+
+
+
+
+
+/* eventListner 모아보기 */
+// 모바일
 moHamberger.addEventListener("click", toggleMoGnb);
 moHamburgerClose.addEventListener("click", toggleMoGnb);
+
+// PC
+langBtn.addEventListener("click", switchLang);
+fontSizeSmBtn.addEventListener("click", fontSizeSmaller);
+fontSizeDftBtn.addEventListener("click", fontSizeDefault);
+fontSizeLgBtn.addEventListener("click", fontSizeLarger);
