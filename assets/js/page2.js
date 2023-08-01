@@ -5,6 +5,25 @@ const body = document.querySelector("body");
 const moHamburgerClose = document.querySelector("#moHamburgerClose");
 
 /*
+// body 고정하기 V1
+function fixBody() {
+ if( moGnbMenu.classList.contains("open") ) {
+  body.classList.add("body--fixed");
+  console.log("body fixed");
+ } else {
+  body.classList.remove("body--fixed");
+  console.log("body released");
+ }
+}
+*/
+
+// body 고정하기 V2
+function fixBody() {
+ body.classList.toggle("body--fixed");
+ console.log("body scroll changed");
+}
+
+/*
 // 메뉴 열기 V1
 function openMoGnb() {
  moGnbMenu.style.display = "initial";
@@ -32,13 +51,6 @@ function toggleMoGnb() {
  fixBody();
 }
 
-function fixBody() {
- if( moGnbMenu.classList.contains("open") ) {
-  body.classList.add("body--fixed");
- } else {
-  body.classList.remove("body--fixed");
- }
-}
 
 
 
@@ -147,6 +159,41 @@ function fontSizeLarger() {
   body.style.zoom = currentFontSize + '%' ;
   fontSizeDftBtn.innerHTML = currentFontSize + '%';
  }
+
+
+
+
+ /* PC GNB 컨트롤 */
+ 
+ function pcOpenGnb(elementId) {
+  
+  // 클릭한 메뉴 열기
+  // const menuChild = '#' + elementId + '>section.gnb__open';
+  const menu = '#' + elementId;
+  // const menuSectionSelected = document.querySelector(menuChild);
+  const menuBtnClicked = document.querySelector(menu);
+  const menuSectionSelected = menuBtnClicked.nextElementSibling;
+  
+  // 기존에 활성화된 메뉴 닫기
+  const currentMenu = document.querySelector(".gnb-pc__child");
+  const currentSectionSelected = currentMenu.nextElementSibling;
+
+  currentMenu.classList.remove("active");
+  menuBtnClicked.classList.toggle("active");
+
+  currentSectionSelected.classList.remove("active");
+  menuSectionSelected.classList.toggle("active");
+
+
+  document.querySelector(".modal-bg").classList.toggle("active");
+
+
+  fixBody()
+
+ }
+ 
+ 
+ 
 
 
 
