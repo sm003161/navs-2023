@@ -39,3 +39,20 @@ element.eventListener("click", beHappy);
 // 대상.style.property = "value"
 element.style.display = "flex";
 ```
+
+# 230801
+
+## js basic
+
+### 1. parseFloat()
+
+string 에서 문자를 제거한 후 number 로 변환하는 함수
+
+```js
+// parseFloat(대상);
+let default = '100%';
+default = parseFloat(default);
+
+// default 는 숫자 100으로 변환됨
+default = 100;
+```
