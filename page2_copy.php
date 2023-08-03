@@ -166,12 +166,12 @@
     <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
 
     <div class="gnb-pc-cont pc-only">
-     <nav aria-label="상단 대메뉴" class="gnb-pc">
+     <nav aria-label="상단 대메뉴" class="gnb-pc" id="gnbPc">
       <ul>
        <li>
         <button type="button" onclick="pcOpenGnb(this.id)" aria-label="마이페이지 보기" id="pcGnb1" class="gnb-pc__child">MyGOV</button>
 
-        <section class="gnb__open border-gray--top" id="pcGnbSection1">
+        <section class="gnb__open border-gray--top">
          <div class="gnb__open-contents">
           
           <aside class="gnb__open__intro">
@@ -209,6 +209,7 @@
           </section>
          </div>
         </section>
+        <div class="gnb__bg"></div>
        </li>
 
        <li>

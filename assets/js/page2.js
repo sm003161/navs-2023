@@ -163,37 +163,35 @@ function fontSizeLarger() {
 
 
 
+
  /* PC GNB 컨트롤 */
- 
+ const gnbPc = document.querySelector("#gnbPc");
+
  function pcOpenGnb(elementId) {
   
-  // 클릭한 메뉴 열기
-  // const menuChild = '#' + elementId + '>section.gnb__open';
-  const menu = '#' + elementId;
-  // const menuSectionSelected = document.querySelector(menuChild);
-  const menuBtnClicked = document.querySelector(menu);
-  const menuSectionSelected = menuBtnClicked.nextElementSibling;
+  // 클릭된 버튼 찾기
+  const btnId = "#" + elementId;
+  console.log(btnId);
+  const liClicked = gnbPc.querySelector(btnId).parentElement;
   
-  // 기존에 활성화된 메뉴 닫기
-  const currentMenu = document.querySelector(".gnb-pc__child");
-  const currentSectionSelected = currentMenu.nextElementSibling;
+  // 이전에 활성화된 버튼 찾기
+  const currentLi = gnbPc.querySelector("li.active");
+  console.log(currentLi);
 
-  currentMenu.classList.remove("active");
-  menuBtnClicked.classList.toggle("active");
+  // 이전에 활성회된 버튼이 있고 자기 자신이 아닐 경우 
+  if (currentLi !== null && currentLi != liClicked) {
+   // 이전에 활성화된 버튼을 비활성화하고 클릭된 버튼을 활성화
+   currentLi.classList.remove("active");
+   liClicked.classList.add("active");
 
-  currentSectionSelected.classList.remove("active");
-  menuSectionSelected.classList.toggle("active");
-
-
-  document.querySelector(".modal-bg").classList.toggle("active");
-
-
-  fixBody()
-
+   // 아닐 경우
+  } else {
+   // 현재 버튼을 활성화/비활성화
+   liClicked.classList.toggle("active");
+   fixBody()
+  }
  }
- 
- 
- 
+
 
 
 
