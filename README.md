@@ -95,3 +95,28 @@ const olderBro = document.querySelector("#olderBro");
 // [ 기준 element ].nextElementSibling
 const youngerBro = olderBro.nextElementSibling;
 ```
+
+# 230803
+
+## js basic
+
+### window.scrollY
+
+```js
+// 브라우저 최상단에서부터 현재 스크롤까지의 거리 구하기
+function stickyGnb() {
+ const currentY = Math.round(window.scrollY);
+ const header = document.querySelector("#header");
+
+ // 현재 스크롤이 n 이상일 경우
+ if (currentY >= n) {
+  // 클래스 추가하고 제거할 때 toggle 사용 시 불안정해 add &remove 사용
+  header.classList.add("sticky");
+ } else {
+  header.classList.remove("sticky");
+ }
+}
+
+// 스크롤 이벤트 발생 시 stickyGnb 실행하기
+document.addEventListener("scroll", stickyGnb);
+```

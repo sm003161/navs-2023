@@ -5,7 +5,7 @@
 <?php
  include("header_page.php");
 ?>
- <section class="container container-page gnb-cont-mo">
+ <section class="container container-page" id="container">
 
  <!-- 상단메뉴 -->
   <div class="top-bar">
@@ -161,7 +161,7 @@
 
 
  <!-- PC gnb -->
-  <header class="border-gray--bottom">
+  <header class="border-gray--bottom" id="header">
    <div class="header-cont">
     <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
 
@@ -209,7 +209,6 @@
           </section>
          </div>
         </section>
-        <div class="gnb__bg"></div>
        </li>
 
        <li>
@@ -276,20 +275,39 @@
     </div>
 
     <div class="header__btn header__btn--right">
-     <button type="button" aria-label="검색하기" class="pc-only"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
-     <button type="button" aria-label="전체 메뉴 보기" class="pc-only"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
-      <button type="button" aria-label="마이페이지" class="mo-only"><i class="fa-regular fa-user" aria-hidden="true"></i></button>
+     <ul>
+      <li>
+       <button type="button" aria-label="검색하기" class="pc-only" onclick="pcOpenGnb(this.id)">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+       </button>
+       <section class="gnb__open border-gray--top" id="pcGnbSearch">
+        <div class="gnb__open-contents">검색어를 입력하세요.</div>
+       </section>
+      </li>
+
+      <li>
+       <button type="button" aria-label="전체 메뉴 보기" class="pc-only" onclick="pcOpenGnb(this.id)">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+       </button>
+       <section class="gnb__open border-gray--top" id="pcGnbSearch">
+        <div class="gnb__open-contents"></div>
+       </section>
+      </li>
+
+     <button type="button" aria-label="마이페이지" class="mo-only"><i class="fa-regular fa-user" aria-hidden="true"></i></button>
+    </li>
+     </ul>
     </div>
    </header>
    
   
 
+   <div id="modal-bg"></div>
+   
+   <main id="main">
+    메인컨텐츠
+   </main>
  </section>
- 
- <div class="modal-bg"></div>
- <main id="main">
-  메인컨텐츠
- </main>
 
 
  <script src="assets/js/page2.js"></script>

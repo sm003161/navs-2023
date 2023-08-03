@@ -2,6 +2,7 @@
 const moHamberger = document.querySelector("#moHamberger");
 const moGnbMenu = document.querySelector(".gnb-mo");
 const body = document.querySelector("body");
+const modalBg = document.querySelector("#modal-bg");
 const moHamburgerClose = document.querySelector("#moHamburgerClose");
 
 /*
@@ -21,6 +22,11 @@ function fixBody() {
 function fixBody() {
  body.classList.toggle("body--fixed");
  console.log("body scroll changed");
+}
+
+// body 어둡게하기
+function dimBody() {
+ modalBg.classList.toggle("active");
 }
 
 /*
@@ -90,7 +96,7 @@ function gnbOpen22() {
 
 
 
-// PC 언어선택하기
+// PC 언어 선택하기
 const langBtn = document.querySelector("#language-btn");
 const langList = document.querySelector("#lang-list");
 
@@ -104,7 +110,7 @@ function switchLang() {
 
 
 
-// PC 배율 컨트롤
+// PC zoom 배율 컨트롤
 const fontSizeSmBtn = document.querySelector("#fontSizeSmBtn");
 const fontSizeDftBtn = document.querySelector("#fontSizeDftBtn");
 const fontSizeLgBtn = document.querySelector("#fontSizeLgBtn");
@@ -119,43 +125,42 @@ function getCurrentFontSize() {
 }
 */
 
-// 줌 축소 버튼 클릭
+// zoom 축소 버튼 클릭
 function fontSizeSmaller() {
  currentFontSize = parseFloat(currentFontSize);
 
+ // 최소 90 까지 축소하기
  if (currentFontSize > 90) {
  currentFontSize = currentFontSize - fontSizeUnit;
-
- setZoomSize();
+ setzoomSize();
  } else {
   alert("더 이상 축소할 수 없어요.");
  }
 }
 
-// 줌 100% 버튼 클릭
+// zoom 100% 버튼 클릭
 function fontSizeDefault() {
  if (currentFontSize != fontSizeBasic) {
   currentFontSize = fontSizeBasic;
-
-  setZoomSize();
+  setzoomSize();
  }
 }
 
-// 줌 확대 버튼 클릭
+// zoom 확대 버튼 클릭
 function fontSizeLarger() {
  currentFontSize = parseFloat(currentFontSize);
 
+ // 최대 110 까지 확대하기
  if (currentFontSize < 110) {
   currentFontSize = currentFontSize + fontSizeUnit;
- 
-  setZoomSize();
+  setzoomSize();
   } else {
    alert("더 이상 확대할 수 없어요.");
   }
  }
  
- // 줌 적용
- function setZoomSize() {
+ // zoom 적용
+ function setzoomSize() {
   body.style.zoom = currentFontSize + '%' ;
   fontSizeDftBtn.innerHTML = currentFontSize + '%';
  }
@@ -164,7 +169,37 @@ function fontSizeLarger() {
 
 
 
- /* PC GNB 컨트롤 */
+ /* PC GNB 컨트롤 V1
+ 
+ function pcOpenGnb(elementId) {
+  
+  // 클릭한 메뉴 열기
+  // const menuChild = '#' + elementId + '>section.gnb__open';
+  const menu = '#' + elementId;
+  // const menuSectionSelected = document.querySelector(menuChild);
+  const menuBtnClicked = document.querySelector(menu);
+  const menuSectionSelected = menuBtnClicked.nextElementSibling;
+  
+  // 기존에 활성화된 메뉴 닫기
+  const currentMenu = document.querySelector(".gnb-pc__child");
+  const currentSectionSelected = currentMenu.nextElementSibling;
+
+  currentMenu.classList.remove("active");
+  menuBtnClicked.classList.toggle("active");
+
+  currentSectionSelected.classList.remove("active");
+  menuSectionSelected.classList.toggle("active");
+
+
+  document.querySelector(".modal-bg").classList.toggle("active");
+
+
+  fixBody()
+ }
+ */
+
+
+ /* PC GNB 컨트롤 V2 */
  const gnbPc = document.querySelector("#gnbPc");
 
  function pcOpenGnb(elementId) {
@@ -188,7 +223,7 @@ function fontSizeLarger() {
   } else {
    // 현재 버튼을 활성화/비활성화
    liClicked.classList.toggle("active");
-   fixBody()
+   dimBody();
   }
  }
 
@@ -197,15 +232,38 @@ function fontSizeLarger() {
 
 
 
+/* 스크롤이 사이즈에 따라 헤더 줄이고 상단에 고정하기 */
+function stickyGnb() {
+ const container = document.querySelector("#container");
+ const headerContainer = container.querySelector("#header");
+ 
+ // 윈도우 기준으로 스크롤 사이즈 구하기
+ const currentY = Math.round(window.scrollY);
+
+ // 현재 스크롤이 90 이상일 경우
+ if (currentY >= 90) {
+ headerContainer.classList.add("sticky");
+} else {
+ headerContainer.classList.remove("sticky");
+ }
+}
+
+
+
 
 
 /* eventListner 모아보기 */
-// 모바일
+// 모바일 gnb 열고 닫기
 moHamberger.addEventListener("click", toggleMoGnb);
 moHamburgerClose.addEventListener("click", toggleMoGnb);
 
-// PC
+// PC 언어 선택하기
 langBtn.addEventListener("click", switchLang);
+
+// PC zoom 조절하기
 fontSizeSmBtn.addEventListener("click", fontSizeSmaller);
 fontSizeDftBtn.addEventListener("click", fontSizeDefault);
 fontSizeLgBtn.addEventListener("click", fontSizeLarger);
+
+// PC gnb stickyGnb 실행하기 ( 스크롤 이벤트 기준 )
+document.addEventListener("scroll", stickyGnb);
