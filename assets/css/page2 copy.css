@@ -136,7 +136,8 @@ header > .header-cont {
  font-weight: bold;
 }
 
-.header-cont > .header__btn > ul > li > button {
+.header-cont > .header__btn > button > i,
+.header-cont > .header__btn > ul > li > button > i {
  font-size: 1.5rem;
 }
 
@@ -284,6 +285,10 @@ font-family: inherit;
 text-align: center;
 font-size: 1.5rem;
 color: #BBB;
+}
+
+.header__btn--right > ul > li > section {
+ display: none;
 }
 
 

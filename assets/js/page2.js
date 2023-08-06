@@ -69,23 +69,23 @@ const moGnb32 = document.querySelector("#gnb-3dth-2");
 const moGnb3 = document.getElementsByClassName("active");
 
 
-function GNBOpen11() {
+function gnbOpen11() {
  moGnb21.classList.toggle("active");
  // console.log(moGnb21.style.display);
 }
 
-function GNBOpen12() {
+function gnbOpen12() {
  moGnb22.classList.toggle("active");
  // console.log(moGnb22.style.display);
 }
 
-function GNBOpen21() {
+function gnbOpen21() {
  // moGnb3.childNodes.classList.remove("active");
  moGnb31.classList.toggle("active");
  // console.log(moGnb22.style.display);
 }
 
-function GNBOpen22() {
+function gnbOpen22() {
  // moGnb3.classList.remove("active");
  moGnb32.classList.toggle("active");
  // console.log(moGnb22.style.display);

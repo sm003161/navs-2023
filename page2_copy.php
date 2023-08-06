@@ -271,7 +271,9 @@
     </div>
     
     <div class="header__btn header__btn--left">
-     <button type="button" aria-label="모바일 전체 메뉴 보기" class="mo-only"  id="moHamberger"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+     <button type="button" aria-label="모바일 전체 메뉴 보기" class="mo-only"  id="moHamberger">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+     </button>
     </div>
 
     <div class="header__btn header__btn--right">
@@ -329,8 +331,9 @@
        </section>
       </li>
 
-     <button type="button" aria-label="마이페이지" class="mo-only"><i class="fa-regular fa-user" aria-hidden="true"></i></button>
-    </li>
+      <li>
+       <button type="button" aria-label="마이페이지" class="mo-only"><i class="fa-regular fa-user" aria-hidden="true"></i></button>
+      </li>
      </ul>
     </div>
    </header>
