@@ -61,7 +61,7 @@ function toggleMoGnb() {
 
 
 
-// 모바일 gnb 컨트롤
+// 모바일 GNB 컨트롤
 const moGnb21 = document.querySelector("#gnb-2dth-1");
 const moGnb22 = document.querySelector("#gnb-2dth-2");
 const moGnb31 = document.querySelector("#gnb-3dth-1");
@@ -69,23 +69,23 @@ const moGnb32 = document.querySelector("#gnb-3dth-2");
 const moGnb3 = document.getElementsByClassName("active");
 
 
-function gnbOpen11() {
+function GNBOpen11() {
  moGnb21.classList.toggle("active");
  // console.log(moGnb21.style.display);
 }
 
-function gnbOpen12() {
+function GNBOpen12() {
  moGnb22.classList.toggle("active");
  // console.log(moGnb22.style.display);
 }
 
-function gnbOpen21() {
+function GNBOpen21() {
  // moGnb3.childNodes.classList.remove("active");
  moGnb31.classList.toggle("active");
  // console.log(moGnb22.style.display);
 }
 
-function gnbOpen22() {
+function GNBOpen22() {
  // moGnb3.classList.remove("active");
  moGnb32.classList.toggle("active");
  // console.log(moGnb22.style.display);
@@ -200,7 +200,7 @@ function fontSizeLarger() {
 
 
  /* PC GNB 컨트롤 V2 */
- const gnbPc = document.querySelector("#gnbPc");
+ const gnbPc = document.querySelector("#header");
 
  function pcOpenGnb(elementId) {
   
@@ -212,13 +212,13 @@ function fontSizeLarger() {
   // 이전에 활성화된 버튼 찾기
   const currentLi = gnbPc.querySelector("li.active");
   console.log(currentLi);
-
+  
   // 이전에 활성회된 버튼이 있고 자기 자신이 아닐 경우 
   if (currentLi !== null && currentLi != liClicked) {
    // 이전에 활성화된 버튼을 비활성화하고 클릭된 버튼을 활성화
    currentLi.classList.remove("active");
    liClicked.classList.add("active");
-
+   
    // 아닐 경우
   } else {
    // 현재 버튼을 활성화/비활성화
@@ -226,8 +226,13 @@ function fontSizeLarger() {
    dimBody();
   }
  }
-
-
+ 
+ /* PC GNB 닫기 */
+ function pcCloseGnb() {
+  const currentLi = gnbPc.querySelector("li.active");
+  currentLi.classList.remove("active");
+  dimBody();
+ }
 
 
 
@@ -253,7 +258,7 @@ function stickyGnb() {
 
 
 /* eventListner 모아보기 */
-// 모바일 gnb 열고 닫기
+// 모바일 GNB 열고 닫기
 moHamberger.addEventListener("click", toggleMoGnb);
 moHamburgerClose.addEventListener("click", toggleMoGnb);
 
@@ -265,5 +270,5 @@ fontSizeSmBtn.addEventListener("click", fontSizeSmaller);
 fontSizeDftBtn.addEventListener("click", fontSizeDefault);
 fontSizeLgBtn.addEventListener("click", fontSizeLarger);
 
-// PC gnb stickyGnb 실행하기 ( 스크롤 이벤트 기준 )
+// PC GNB stickyGnb 실행하기 ( 스크롤 이벤트 기준 )
 document.addEventListener("scroll", stickyGnb);

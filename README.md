@@ -100,23 +100,46 @@ const youngerBro = olderBro.nextElementSibling;
 
 ## js basic
 
-### window.scrollY
+# window.scrollY
+
+뷰포트 최상단에서부터 현재 스크롤까지의 거리를 구하고 이용하기
 
 ```js
-// 브라우저 최상단에서부터 현재 스크롤까지의 거리 구하기
-function stickyGnb() {
- const currentY = Math.round(window.scrollY);
- const header = document.querySelector("#header");
+// 현재 스크롤까지의 거리를 정수로 구하기
+const currentY = Math.round(window.scrollY);
 
- // 현재 스크롤이 n 이상일 경우
+function scrollEvent() {
+ // 현재 스크롤이 n 과 같거나 클 경우
  if (currentY >= n) {
-  // 클래스 추가하고 제거할 때 toggle 사용 시 불안정해 add &remove 사용
-  header.classList.add("sticky");
+  // down 이라는 클래스를 추가하고 제거
+  // toggle 사용하면 불안정해 add &remove 사용하기
+  element.classList.add("down");
  } else {
-  header.classList.remove("sticky");
+  element.classList.remove("down");
  }
 }
 
-// 스크롤 이벤트 발생 시 stickyGnb 실행하기
-document.addEventListener("scroll", stickyGnb);
+// 스크롤 이벤트가 발생 때마다 scrollEvent 실행하기
+document.addEventListener("scroll", scrollEvent);
+```
+
+# 230806
+
+## CSS Counter
+
+ol > li 를 나만의 디자인으로 만들고 싶을 경우에 CSS 의 counter 와 before 가상선택자를 이용할 수 있다. ol 과 li 에 아래의 코드를 입력해 활성화 & 사용한다. 같은 방법으로 ol 이 아닌 다른 태그들에도 적용할 수 있다. 임의의 숫자로 지정할 수도 있다.
+
+```CSS
+ol {
+ counter-reset: [ 이름 ];
+}
+
+ol > li {
+ counter-increment: [ 이름 ];
+}
+
+ol > li::before P {
+ content: counter([ 이름 ]);
+ /* 기타 스타일링 시작 ... */
+}
 ```

@@ -166,7 +166,7 @@
     <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
 
     <div class="gnb-pc-cont pc-only">
-     <nav aria-label="상단 대메뉴" class="gnb-pc" id="gnbPc">
+     <nav aria-label="상단 대메뉴" class="gnb-pc">
       <ul>
        <li>
         <button type="button" onclick="pcOpenGnb(this.id)" aria-label="마이페이지 보기" id="pcGnb1" class="gnb-pc__child">MyGOV</button>
@@ -277,11 +277,46 @@
     <div class="header__btn header__btn--right">
      <ul>
       <li>
-       <button type="button" aria-label="검색하기" class="pc-only" onclick="pcOpenGnb(this.id)">
+       <button type="button" onclick="pcOpenGnb(this.id)" aria-label="검색하기" id="pcGnbSearchBtn" class="pc-only">
         <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
        </button>
-       <section class="gnb__open border-gray--top" id="pcGnbSearch">
-        <div class="gnb__open-contents">검색어를 입력하세요.</div>
+       <section class="gnb__open border-gray--top">
+        <div class="gnb__open-contents">
+         <div class="row gnb__search">
+          <form action="" method="get">
+           <input type="text" placeholder="검색어를 입력하세요."/>
+           <button type="button">
+            <i class="fa-solid fa-magnifying-glass fa-xl" aria-hidden="true"></i>
+           </button>
+          </form>
+          <button type="button" onclick="pcCloseGnb()" id="pcGnbSearchClose">
+           <i class="fa-solid fa-close fa-xl" aria-hidden="true"></i>
+          </button>
+         </div>
+         <section class="rankings">
+          <div class="searchRanking">
+           <p class="title">인기 검색어</p>
+           <ol>
+            <li>주민등록등본</li>
+            <li>가족관계증명서</li>
+            <li>세목별과세증명서</li>
+            <li>전입신고</li>
+            <li>여권재발급</li>
+           </ol>
+          </div>
+
+          <div class="hotService">
+           <p class="title">많이 찾는 서비스</p>
+           <ol>
+            <li>건축물대장 등본(초본) 발급(열람)</li>
+            <li>자동차 등록원부등본(초본) 발급(열람)</li>
+            <li>주민등록표 등본(초본) 발급</li>
+            <li>토지(임야)대장 등본 발급(열람)</li>
+            <li>지방세 납세증명서 발급</li>
+           </ol>
+          </div>
+         </section>
+        </div>
        </section>
       </li>
 
@@ -299,8 +334,6 @@
      </ul>
     </div>
    </header>
-   
-  
 
    <div id="modal-bg"></div>
    
