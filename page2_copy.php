@@ -55,19 +55,19 @@
    <nav class="gnb-mo__list">
     <ul>
      <li>
-      <button type="button" class="gnb-1dth border-gray--bottom" onclick="gnbOpen11()">
+      <button type="button" class="gnb-1dth border-gray--bottom" onclick="moOpenGnb1dth(this.id)" id="moGnb1">
        <i class="fa-solid fa-gear"></i>
        <span> MyGOV</span>
        <span class="arrow-down--black"></span>
       </button>
-      <ul class="gnb-2dth" id="gnb-2dth-1">
+      <ul class="gnb-2dth" id="moGnb11">
        <li><a href="#">MyGOV 홈</a></li>
        <li>
-        <a href="javascript:void(0);" onclick="gnbOpen21()">
+        <a href="javascript:void(0);" onclick="moOpenGnb2dth(this.id)"  id="moGnb111">
          <span>나의 신청내역</span>
          <span class="arrow-down--black"></span>
         </a>
-        <ul class="gnb-3dth" id="gnb-3dth-1">
+        <ul class="gnb-3dth" id="moGnb1111">
          <li><a href="#">서비스 신청내역</a></li>
          <li><a href="#">온종일돌봄 신청내역</a></li>
          <li><a href="#">환불정보조회</a></li>
@@ -75,11 +75,11 @@
        </li>
        <li><a href="#">나의 생활정보</a></li>
        <li>
-        <a href="javascript:void(0);" onclick="gnbOpen22()">
+        <a href="javascript:void(0);" onclick="moOpenGnb2dth(this.id)"  id="moGnb121">
          <span>나의 정보관리</span>
          <span class="arrow-down--black"></span>
         </a>
-        <ul class="gnb-3dth" id="gnb-3dth-2">
+        <ul class="gnb-3dth" id="moGnb1211">
          <li><a href="#">회원 정보</a></li>
          <li><a href="#">서비스 이용동의</a></li>
          <li><a href="#">즐겨찾는 서비스 설정</a></li>
@@ -90,7 +90,7 @@
       </ul>
      </li>
      <li>
-      <button type="button" class="gnb-1dth border-gray--bottom" onclick="gnbOpen12()">
+      <button type="button" class="gnb-1dth border-gray--bottom" onclick="moOpenGnb1dth(this.id)" id="moGnb2">
        <i class="fa-regular fa-folder-open"></i>
        <span> 서비스</span>
        <span class="arrow-down--black"></span>
@@ -323,12 +323,9 @@
       </li>
 
       <li>
-       <button type="button" aria-label="전체 메뉴 보기" class="pc-only" onclick="pcOpenGnb(this.id)">
+       <button type="button" aria-label="전체 메뉴 보기" id="pcHamberger" class="pc-only">
         <i class="fa-solid fa-bars" aria-hidden="true"></i>
        </button>
-       <section class="gnb__open border-gray--top" id="pcGnbSearch">
-        <div class="gnb__open-contents"></div>
-       </section>
       </li>
 
       <li>
@@ -338,11 +335,289 @@
     </div>
    </header>
 
+
+   <!-- PC gnb 전체보기 -->
+   <section class="mo-hide gnb-pc-all">
+    <header class="border-gray--bottom">
+     <div class="header-cont">
+      <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
+
+      <p>전체메뉴</p>
+
+      <div class="header__btn header__btn--right">
+       <ul>
+        <li>
+         <button type="button" aria-label="닫기" id="pcHamburgerClose">
+          <i class="fa-solid fa-close" aria-hidden="true"></i>
+         </button>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </header>
+    
+    <nav class="gnb-pc-all__list">
+     <ul>
+      <li class="border-gray--bottom">
+       <section>
+        <h1>MyGOV</h1>
+        <ul>
+         <li>
+          <h2>MyGOV 홈</h2>
+         </li> 
+
+         <li>
+          <h2>나의 신청내역</h2>
+          <ul>
+           <li>서비스 신청내역</li>
+           <li>온종일돌봄 신청내역</li>
+           <li>전자증명서 내역</li>
+           <li>환불정보조회 모바일</li>
+           <li>서비스 바구니</li>
+          </ul>
+         </li> 
+         
+         <li>
+          <h2>나의 생활정보</h2>
+         </li> 
+         
+         <li>
+          <h2>나의 정보관리</h2>
+          <ul>
+           <li>서비스 이용동의</li>
+           <li>회원정보</li>
+           <li>회원탈퇴</li>
+           <li>자주찾는 서비스 설정</li>
+           <li>알림 수신동의</li>
+          </ul>
+         </li>
+        </ul>
+       </section>
+      </li>
+
+      
+      <li class="border-gray--bottom">
+       <section>
+        <h1>서비스</h1>
+        <ul>
+         <li>
+          <h2>신청.조회.발급</h2>
+         </li> 
+
+         <li>
+          <h2>사실/진위 확인</h2>
+         </li> 
+         
+         <li>
+          <h2>원스톱 서비스</h2>
+         </li> 
+
+         <li>
+          <h2>분야별 서비스</h2>
+         </li>
+
+         <li>
+          <h2>기업/단체 서비스</h2>
+         </li>
+
+         <li>
+          <h2 class="with-link--black">돌봄시설 등 위치 찾기</h2>
+         </li>
+        </ul>
+       </section>
+      </li>
+
+
+      <li class="border-gray--bottom">
+       <section>
+        <h1>보조금24</h1>
+        <ul>
+         <li>
+          <h2>보조금24 홈</h2>
+         </li> 
+
+         <li>
+          <h2>나의 혜택</h2>
+         </li> 
+         
+         <li>
+          <h2>간편찾기</h2>
+         </li> 
+
+         <li>
+          <h2>전체 혜택</h2>
+         </li>
+
+         <li>
+          <h2>보조금24란</h2>
+          <ul>
+           <li>소개</li>
+           <li>이용안내</li>
+           <li>자주묻는질문</li>
+          </ul>
+         </li>
+        </ul>
+       </section>
+      </li>
+
+      <li class="border-gray--bottom">
+       <section>
+        <h1>정책정보</h1>
+        <ul>
+         <li>
+          <h2>분야별 정책정보</h2>
+          <ul>
+           <li>정책뉴스</li>
+           <li>연구보고서</li>
+           <li>간행물</li>
+           <li>정책자료</li>
+          </ul>
+         </li> 
+
+         <li>
+          <h2>정부/지자체 조직도</h2>
+          <ul>
+           <li>중앙행정기관</li>
+           <li>지방자치단체</li>
+           <li>행정위원회</li>
+           <li>분쟁조정위원회</li>
+          </ul>
+         </li> 
+         
+         <li>
+          <h2>정부/지자체 운영누리집</h2>
+         </li> 
+
+         <li>
+          <h2>지자체 소식</h2>
+         </li>
+
+         <li>
+          <h2>공모전</h2>
+         </li>
+
+         <li>
+          <h2>공공자원공유</h2>
+         </li>
+
+         <li>
+          <h2>국고보조금 부정수급 신고</h2>
+         </li>
+
+        </ul>
+       </section>
+      </li>
+
+      <li class="border-gray--bottom">
+       <section>
+        <h1>고객센터</h1>
+        <ul>
+         <li>
+          <h2>공지사항</h2>
+         </li> 
+
+         <li>
+          <h2>이용안내</h2>
+          <ul>
+           <li>정부24 이용방법</li>
+           <li>회원가입/인증서 등록방법</li>
+           <li>전자결제 안내</li>
+           <li>무인민원 발급 안내</li>
+           <li>어디서나 민원</li>
+           <li>장애인 이용안내</li>
+           <li>행정정보공동이용</li>
+          </ul>
+         </li> 
+         
+         <li>
+          <h2>자주 묻는 질문 (FAQ)</h2>
+         </li> 
+
+         <li>
+          <h2>자료실</h2>
+         </li>
+
+         <li>
+          <h2>상담예약</h2>
+         </li>
+
+         <li>
+          <h2>개선 의견</h2>
+         </li>
+        </ul>
+       </section>
+      </li>
+
+      <li class="border-gray--bottom">
+       <section>
+        <h1>정부24 소개</h1>
+        <ul>
+         <li>
+          <h2>정부24 개요</h2>
+         </li> 
+
+         <li>
+          <h2>데이터로 보는 정부24</h2>
+         </li>
+        </ul>
+       </section>
+      </li>
+
+      <li class="border-gray--bottom">
+       <section>
+        <h1>인증센터</h1>
+        <ul>
+         <li>
+          <h2>인증 등록/관리</h2>
+         </li> 
+
+         <li>
+          <h2>복합인증 관리</h2>
+         </li>
+        </ul>
+       </section>
+      </li>
+
+      <li class="border-gray--bottom">
+       <section>
+        <h1>보안센터</h1>
+        <ul>
+         <li>
+          <h2>보안프로그램</h2>
+         </li> 
+
+         <li>
+          <h2>개인정보처리방침</h2>
+         </li>
+
+         <li>
+          <h2>저작권보호정책</h2>
+         </li>
+
+         <li>
+          <h2>이용약관</h2>
+         </li>
+        </ul>
+       </section>
+      </li>
+
+
+
+
+
+
+      
+     </ul>
+    </nav>
+    
+   </section>
+   
+
    <div id="modal-bg"></div>
    
-   <main id="main">
-    메인컨텐츠
-   </main>
+   <main id="main">메인컨텐츠</main>
+
+   
  </section>
 
 

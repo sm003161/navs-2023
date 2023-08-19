@@ -1,9 +1,14 @@
 /* 모바일 햄버거 컨트롤 */
-const moHamberger = document.querySelector("#moHamberger");
-const moGnbMenu = document.querySelector(".gnb-mo");
 const body = document.querySelector("body");
 const modalBg = document.querySelector("#modal-bg");
+
+const moGnbMenu = document.querySelector(".gnb-mo");
+const moHamberger = document.querySelector("#moHamberger");
 const moHamburgerClose = document.querySelector("#moHamburgerClose");
+
+const pcGnbMenu = document.querySelector(".gnb-pc-all");
+const pcHamberger = document.querySelector("#pcHamberger");
+const pcHamburgerClose = document.querySelector("#pcHamburgerClose");
 
 /*
 // body 고정하기 V1
@@ -52,22 +57,20 @@ moHamburgerClose.addEventListener("click", closeMoGnb)
 
 // 메뉴 열고 닫기 V2
 function toggleMoGnb() {
- moGnbMenu.classList.toggle("open");
+ moGnbMenu.classList.toggle("active");
 
  fixBody();
 }
 
 
 
-
-
-// 모바일 GNB 컨트롤
+/*
+// 모바일 GNB 컨트롤 V1
 const moGnb21 = document.querySelector("#gnb-2dth-1");
 const moGnb22 = document.querySelector("#gnb-2dth-2");
 const moGnb31 = document.querySelector("#gnb-3dth-1");
 const moGnb32 = document.querySelector("#gnb-3dth-2");
 const moGnb3 = document.getElementsByClassName("active");
-
 
 function gnbOpen11() {
  moGnb21.classList.toggle("active");
@@ -90,18 +93,48 @@ function gnbOpen22() {
  moGnb32.classList.toggle("active");
  // console.log(moGnb22.style.display);
 }
+*/
+
+// 모바일 GNB 컨트롤 V2 - 1dth
+function moOpenGnb1dth(currentBtn) {
+ // console.log(currentBtn);
+ const currentUl = "#" + currentBtn + "1";
+ const arrowDownBlack = document.querySelector(".arrow-down--black");
+ // console.log(currentUl);
+
+ document.querySelector(currentUl).classList.toggle("active");
+ arrowDownBlack.classList.toggle("arrow-up--black")
+}
 
 
+
+// 모바일 GNB 컨트롤 V2 - 2dth
+function moOpenGnb2dth(currentA) {
+ // a 태그 ID 가져와 변환하기
+ const currentAName = "#" + currentA;
+ const currentACont = document.querySelector(currentAName);
+ const arrowDownBlack = currentACont.querySelector(".arrow-down--black");
+ // console.log(currentACont);
+ 
+ const currentUlName = "#" + currentA + "1"; 
+ const currentUl = document.querySelector(currentUlName);
+ // console.log(currentUl);
+ 
+ currentUl.classList.toggle("active");
+ arrowDownBlack.classList.toggle("arrow-up--black")
+}
 
 
 
 
 // PC 언어 선택하기
 const langBtn = document.querySelector("#language-btn");
+const arrowDownWhite = document.querySelector(".arrow-down--white");
 const langList = document.querySelector("#lang-list");
 
 function switchLang() {
  langList.classList.toggle("active");
+ arrowDownWhite.classList.toggle("arrow-up--white")
 }
 
 
@@ -235,6 +268,14 @@ function fontSizeLarger() {
  }
 
 
+/* PC GNB 햄버거 열고 닫기 */
+function togglePcGnb() {
+ pcGnbMenu.classList.toggle("active");
+
+ fixBody();
+}
+
+
 
 
 /* 스크롤이 사이즈에 따라 헤더 줄이고 상단에 고정하기 */
@@ -264,6 +305,10 @@ moHamburgerClose.addEventListener("click", toggleMoGnb);
 
 // PC 언어 선택하기
 langBtn.addEventListener("click", switchLang);
+
+// PC 햄버거 열고 닫기
+pcHamberger.addEventListener("click", togglePcGnb);
+pcHamburgerClose.addEventListener("click", togglePcGnb);
 
 // PC zoom 조절하기
 fontSizeSmBtn.addEventListener("click", fontSizeSmaller);
