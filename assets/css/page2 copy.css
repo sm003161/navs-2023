@@ -122,21 +122,21 @@ body.body--fixed {
  width: 100vw;
 }
 
-header {
+.container header {
  background-color: #FFF;
  z-index: 3;
  /* width: 100vw; */
  position: relative;
 }
 
-header > .header-cont {
+.container header > .header-cont {
  padding: 1rem;
  display: flex;
  justify-content: space-between;
  align-items: center;
 }
 
-.header-cont > a.logo {
+.container .header-cont > a.logo {
  font-size: 2rem;
  font-weight: bold;
 }

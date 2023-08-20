@@ -18,7 +18,3 @@
  <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
  <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-   <a href="#main" class="header_skip-link">주요 컨텐츠로 바로가기</a>
-  </header>

@@ -5,13 +5,13 @@
 <?php
  include("header_page.php");
 ?>
- <section class="container container-page" id="container">
+ <section class="container container-page" id="container" aria-label="헤더">
 
- <!-- 상단메뉴 -->
+ <!-- PC 상단메뉴 -->
   <div class="top-bar">
    <div class="top-bar-cont">
     <span>이 누리집은 키자이의 비공식 전자정부 누리집입니다.</span>
-    <nav class="pc-only" aria-label="탑 메뉴">
+    <nav class="pc-only" aria-label="데스크탑 탑 메뉴">
      <ul aria-label="탑 메뉴">
       <li>
        <button type="button" class="top-bar__list arrow-down--white" id="language-btn" aria-label="switch language">for foreigner</button>
@@ -25,8 +25,7 @@
       <li><a href="#" class="top-bar__list">정부24소개</a></li>
       <li><a href="#" class="top-bar__list">로그인</a></li>
       <li><a href="#" class="top-bar__list">인증센터</a></li>
-      <li>
-       화면크기
+      <li>화면크기
         <span class="top-bar__list__zoom-button">
          <button id="fontSizeSmBtn" type="button" aria-label="글씨 줄이기"></button>
          <button id="fontSizeDftBtn" type="button" aria-label="글씨 100%">100%</button>
@@ -40,23 +39,23 @@
 
 
  <!-- 모바일 gnb -->
-  <section class="gnb-mo mo-only">
+  <section class="gnb-mo mo-only" aria-label="모바일 전체 메뉴">
    <div class="gnb-mo__top">
     <a href="#" class="arrow-right--black">
      <i class="fa-regular fa-user" aria-hidden="true"></i> <strong>로그인</strong>을 해주세요
     </a>
-    <button type="button" id="moHamburgerClose"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" id="moHamburgerClose"><i class="fa-solid fa-xmark" role="img" aria-hidden="true"></i></button>
    </div>
    <div class="gnb-mo__verify">
-    <button type="button"><i class="fa-solid fa-lock"></i> 인증서등록</button>
-    <button type="button"><i class="fa-solid fa-fingerprint"></i> 간편번호/지문등록</button>
+    <button type="button"><i class="fa-solid fa-lock" role="img" aria-hidden="true"></i> 인증서등록</button>
+    <button type="button"><i class="fa-solid fa-fingerprint" role="img" aria-hidden="true"></i> 간편번호/지문등록</button>
    </div>
 
-   <nav class="gnb-mo__list">
+   <nav class="gnb-mo__list" aria-label="모바일 메뉴 목록">
     <ul>
      <li>
       <button type="button" class="gnb-1dth border-gray--bottom" onclick="moOpenGnb1dth(this.id)" id="moGnb1">
-       <i class="fa-solid fa-gear"></i>
+       <i class="fa-solid fa-gear" role="img" aria-hidden="true"></i>
        <span> MyGOV</span>
        <span class="arrow-down--black"></span>
       </button>
@@ -91,7 +90,7 @@
      </li>
      <li>
       <button type="button" class="gnb-1dth border-gray--bottom" onclick="moOpenGnb1dth(this.id)" id="moGnb2">
-       <i class="fa-regular fa-folder-open"></i>
+       <i class="fa-regular fa-folder-open" role="img" aria-hidden="true"></i>
        <span> 서비스</span>
        <span class="arrow-down--black"></span>
       </button>
@@ -105,35 +104,35 @@
      </li>
      <li>
       <button type="button" class="gnb-1dth border-gray--bottom">
-      <i class="fa-solid fa-gift"></i>
+      <i class="fa-solid fa-gift" role="img" aria-hidden="true"></i>
       <span> 보조금24</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
       <button type="button" class="gnb-1dth border-gray--bottom">
-      <i class="fa-solid fa-file-invoice"></i>
+      <i class="fa-solid fa-file-invoice" role="img" aria-hidden="true"></i>
       <span> 정책정보</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
       <button type="button" class="gnb-1dth border-gray--bottom">
-      <i class="fa-solid fa-comment-dots"></i>
+      <i class="fa-solid fa-comment-dots" role="img" aria-hidden="true"></i>
       <span> 고객센터</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
       <button type="button" class="gnb-1dth border-gray--bottom">
-      <i class="fa-solid fa-key"></i>
+      <i class="fa-solid fa-key" role="img" aria-hidden="true"></i>
       <span> 인증센터</span>
       <span class="arrow-down--black"></span>
      </button>
      </li>
      <li>
       <button type="button" class="gnb-1dth border-gray--bottom">
-      <i class="fa-solid fa-shield-halved"></i>
+      <i class="fa-solid fa-shield-halved" role="img" aria-hidden="true"></i>
       <span> 보안센터</span>
       <span class="arrow-down--black"></span>
      </button>
@@ -163,20 +162,22 @@
  <!-- PC gnb -->
   <header class="border-gray--bottom" id="header">
    <div class="header-cont">
-    <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
+    <a href="page2_copy.php" class="logo" aria-label="정부24 홈">
+     <i class="fa-solid fa-fire" role="img" aria-hidden="true"></i> 정부24
+    </a>
 
     <div class="gnb-pc-cont pc-only">
-     <nav aria-label="상단 대메뉴" class="gnb-pc">
+     <nav aria-label="데스크탑 상단 대메뉴" class="gnb-pc">
       <ul>
        <li>
         <button type="button" onclick="pcOpenGnb(this.id)" aria-label="마이페이지 보기" id="pcGnb1" class="gnb-pc__child">MyGOV</button>
 
-        <section class="gnb__open border-gray--top">
+        <section class="gnb__open border-gray--top" aria-label="데스크탑 1차 메뉴">
          <div class="gnb__open-contents">
           
-          <aside class="gnb__open__intro">
+          <aside class="gnb__open__intro" aria-label="데스크탑 메뉴 타이틀 - 마이페이지 보기">
            <div>
-            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+            <i class="fa-solid fa-gear" role="img" aria-hidden="true"></i>
            </div>
            <dl class="gnb__open__desc">
             <dt>MyGOV</dt>
@@ -184,7 +185,7 @@
            </dl>
           </aside>
 
-          <section class="gnb__2depth">
+          <section class="gnb__2depth" aria-label="데스크탑 2차 메뉴">
            <ul>
             <li>
              <button type="button" class="gnb__2depth-title">MyGOV 홈</button>
@@ -214,12 +215,12 @@
        <li>
         <button type="button" onclick="pcOpenGnb(this.id)" aria-label="각종 서비스 보기" id="pcGnb2" class="gnb-pc__child">서비스</button>
 
-        <section class="gnb__open border-gray--top" id="pcGnbSection2">
+        <section class="gnb__open border-gray--top" id="pcGnbSection2" aria-label="데스크탑 2차 메뉴">
          <div class="gnb__open-contents">
           
-          <aside class="gnb__open__intro">
+          <aside class="gnb__open__intro" aria-label="데스크탑 메뉴 목록 - 각종 서비스 보기">
            <div>
-            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+            <i class="fa-solid fa-gear" role="img" aria-hidden="true"></i>
            </div>
            <dl class="gnb__open__desc">
             <dt>서비스</dt>
@@ -227,7 +228,7 @@
            </dl>
           </aside>
 
-          <section class="gnb__2depth">
+          <section class="gnb__2depth" aria-label="데스크탑 2차 메뉴">
            <ul>
             <li>
              <button type="button" class="gnb__2depth-title">MyGOV 홈</button>
@@ -272,7 +273,7 @@
     
     <div class="header__btn header__btn--left">
      <button type="button" aria-label="모바일 전체 메뉴 보기" class="mo-only"  id="moHamberger">
-      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <i class="fa-solid fa-bars" role="img" aria-hidden="true"></i>
      </button>
     </div>
 
@@ -280,22 +281,22 @@
      <ul>
       <li>
        <button type="button" onclick="pcOpenGnb(this.id)" aria-label="검색하기" id="pcGnbSearchBtn" class="pc-only">
-        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <i class="fa-solid fa-magnifying-glass" role="img" aria-hidden="true"></i>
        </button>
-       <section class="gnb__open border-gray--top">
+       <section class="gnb__open border-gray--top" aria-label="데스크탑 검색 메뉴">
         <div class="gnb__open-contents">
          <div class="row gnb__search">
           <form action="" method="get">
-           <input type="text" placeholder="검색어를 입력하세요."/>
+           <input type="text" placeholder="검색어를 입력하세요." autocomplete="on" id="search"/>
            <button type="button">
-            <i class="fa-solid fa-magnifying-glass fa-xl" aria-hidden="true"></i>
+            <i class="fa-solid fa-magnifying-glass fa-xl" role="img" aria-hidden="true"></i>
            </button>
           </form>
           <button type="button" onclick="pcCloseGnb()" id="pcGnbSearchClose">
-           <i class="fa-solid fa-close fa-xl" aria-hidden="true"></i>
+           <i class="fa-solid fa-close fa-xl" role="img" aria-hidden="true"></i>
           </button>
          </div>
-         <section class="rankings">
+         <section class="rankings" aria-label="데스크탑 많이 찾는 메뉴">
           <div class="searchRanking">
            <p class="title">인기 검색어</p>
            <ol>
@@ -324,12 +325,12 @@
 
       <li>
        <button type="button" aria-label="전체 메뉴 보기" id="pcHamberger" class="pc-only">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars" role="img" aria-hidden="true"></i>
        </button>
       </li>
 
       <li>
-       <button type="button" aria-label="마이페이지" class="mo-only"><i class="fa-regular fa-user" aria-hidden="true"></i></button>
+       <button type="button" aria-label="마이페이지" class="mo-only"><i class="fa-regular fa-user" role="img" aria-hidden="true"></i></button>
       </li>
      </ul>
     </div>
@@ -340,7 +341,7 @@
    <section class="mo-hide gnb-pc-all">
     <header class="border-gray--bottom">
      <div class="header-cont">
-      <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire"></i> 정부24</a>
+      <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire" role="img" aria-hidden="true"></i> 정부24</a>
 
       <p>전체메뉴</p>
 
@@ -348,7 +349,7 @@
        <ul>
         <li>
          <button type="button" aria-label="닫기" id="pcHamburgerClose">
-          <i class="fa-solid fa-close" aria-hidden="true"></i>
+          <i class="fa-solid fa-close" role="img" aria-hidden="true"></i>
          </button>
         </li>
        </ul>
@@ -356,10 +357,10 @@
      </div>
     </header>
     
-    <nav class="gnb-pc-all__list">
+    <nav class="gnb-pc-all__list" aria-label="데스크탑 전체 메뉴">
      <ul>
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 마이페이지">
         <h1>MyGOV</h1>
         <ul>
          <li>
@@ -397,7 +398,7 @@
 
       
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 서비스">
         <h1>서비스</h1>
         <ul>
          <li>
@@ -429,7 +430,7 @@
 
 
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 보조금24">
         <h1>보조금24</h1>
         <ul>
          <li>
@@ -461,7 +462,7 @@
       </li>
 
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 정책정보">
         <h1>정책정보</h1>
         <ul>
          <li>
@@ -509,7 +510,7 @@
       </li>
 
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 고객센터">
         <h1>고객센터</h1>
         <ul>
          <li>
@@ -549,7 +550,7 @@
       </li>
 
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 정부24 소개">
         <h1>정부24 소개</h1>
         <ul>
          <li>
@@ -564,7 +565,7 @@
       </li>
 
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 인증센터">
         <h1>인증센터</h1>
         <ul>
          <li>
@@ -579,7 +580,7 @@
       </li>
 
       <li class="border-gray--bottom">
-       <section>
+       <section aria-label="데스크탑 전체 메뉴 - 보안센터">
         <h1>보안센터</h1>
         <ul>
          <li>
