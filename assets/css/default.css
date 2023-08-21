@@ -74,9 +74,8 @@ a {
  font-family: 'Nothing You Could Do', cursive;
 }
 
-section.notice-container {
+marquee.notice-container {
  padding: 0.5rem;
-	text-align: center;
 	background-color: #333;
 	color: white;
 }

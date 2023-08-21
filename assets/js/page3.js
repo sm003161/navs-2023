@@ -107,7 +107,6 @@ function moOpenGnb1dth(currentBtn) {
 }
 
 
-
 // 모바일 GNB 컨트롤 V2 - 2dth
 function moOpenGnb2dth(currentA) {
  // a 태그 ID 가져와 변환하기

@@ -1,5 +1,5 @@
 <head>
- <link rel="stylesheet" href="assets/css/page2 copy.css">
+ <link rel="stylesheet" href="assets/css/page3.css">
 </head>
 
 <?php
@@ -162,7 +162,7 @@
  <!-- PC gnb -->
   <header class="border-gray--bottom" id="header">
    <div class="header-cont">
-    <a href="page2_copy.php" class="logo" aria-label="정부24 홈">
+    <a href="page3.php" class="logo" aria-label="정부24 홈">
      <i class="fa-solid fa-fire" role="img" aria-hidden="true"></i> 정부24
     </a>
 
@@ -341,7 +341,7 @@
    <section class="mo-hide gnb-pc-all">
     <header class="border-gray--bottom">
      <div class="header-cont">
-      <a href="page2_copy.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire" role="img" aria-hidden="true"></i> 정부24</a>
+      <a href="page3.php" class="logo" aria-label="정부24 홈"><i class="fa-solid fa-fire" role="img" aria-hidden="true"></i> 정부24</a>
 
       <p>전체메뉴</p>
 
@@ -622,5 +622,5 @@
  </section>
 
 
- <script src="assets/js/page2.js"></script>
+ <script src="assets/js/page3.js"></script>
 </body>
