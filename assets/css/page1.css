@@ -20,7 +20,7 @@
 .container-page > .top-header > ul > li > button {
   font-size: 2rem;
   padding: 0;
-  color: #333;
+  color: var(--main-black);
 }
 
 .container-page > .top-header > ul > li > div.tooltip-container > p.tooltip {
@@ -38,7 +38,7 @@
 }
 
 .container-page > .search-area > .search-bar {
- border: #333 solid 1px;
+ border: var(--main-black) solid 1px;
  width: 100%;
  border-radius: 100px;
  display: flex;
@@ -80,7 +80,7 @@
 }
 
 .container-page > .search-area > .search-bar > form > button {
- color: #333;
+ color: var(--main-black);
  font-size: 1.5rem;
  padding: 0;
 }
@@ -221,7 +221,7 @@
   top: 44%;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #333;
+  border-top: 5px solid var(--main-black);
   border-radius: 5px;
   margin: 0;
  }

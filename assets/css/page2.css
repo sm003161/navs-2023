@@ -148,18 +148,18 @@
  
  .container-page > .top-menu > .top-menu__container > nav > ul > li > ul.top-menu__list__lang {
   background-color: #FFF;
-  color: #333;
+  color: var(--main-black);
   position: absolute;
   left: -33px;
   top: 1.5rem;
   z-index: 5;
-  color: #333;
+  color: var(--main-black);
   border-radius: 0.3rem;
   border: 1px solid #EBEBEB;
  }
 
  .top-menu__list__lang > li > a {
-  color: #333;
+  color: var(--main-black);
   display: block;
   overflow: hidden;
   padding: 0.5rem 1rem;
@@ -250,7 +250,7 @@
  
  .container-page > header > .header-container > .gnb-menu-container > .gnb-menu > ul > li > button.active {
   font-weight: bolder;
-  border-bottom: 3px solid #333;
+  border-bottom: 3px solid var(--main-black);
  }
  
  .container-page > header > .header-container > div.gnb-menu__btn-group {

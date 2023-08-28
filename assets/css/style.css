@@ -12,11 +12,11 @@
 }
 
 .container-index > nav > ul {
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--main-black);
 }
 
 .container-index > nav > ul > li {
- border-bottom: 1px solid #333;
+ border-bottom: 1px solid var(--main-black);
 }
 
 .container-index > nav > ul > li > a.service-list {
@@ -32,7 +32,7 @@
   font-weight: 200;
   letter-spacing: normal;
   padding: 0.5rem;
-  background-color: #333;
+  background-color: var(--main-black);
   display: flex;
   color: white;
 }
@@ -59,7 +59,7 @@
   }
 
   .container-index > nav > ul > li:nth-child(odd) {
-    border-right: 1px solid #333;
+    border-right: 1px solid var(--main-black);
   }
 
   .container-index > nav > ul {

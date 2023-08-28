@@ -374,12 +374,12 @@ color: #BBB;
  
  .top-bar > .top-bar-cont > nav > ul > li > ul.top-bar__list__lang {
   background-color: #FFF;
-  color: #333;
+  color: var(--main-black);
   position: absolute;
   left: -33px;
   top: 1.5rem;
   z-index: 5;
-  color: #333;
+  color: var(--main-black);
   border-radius: 0.3rem;
   border: 1px solid #EBEBEB;
   display: none;
@@ -390,7 +390,7 @@ color: #BBB;
  } 
 
  .top-bar > .top-bar-cont > nav > ul > li > ul.top-bar__list__lang > li > a {
-  color: #333;
+  color: var(--main-black);
   display: block;
   overflow: hidden;
   padding: 0.3rem 1rem;
@@ -526,7 +526,7 @@ color: #BBB;
  
  .gnb-pc-cont > .gnb-pc > ul > li.active > .gnb-pc__child {
   font-weight: bolder;
-  border-bottom: 3px solid #333;
+  border-bottom: 3px solid var(--main-black);
  }
  
 
@@ -600,7 +600,7 @@ color: #BBB;
  }
  
  .gnb__search > form {
-  border: 2px solid #333;
+  border: 2px solid var(--main-black);
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -659,7 +659,7 @@ color: #BBB;
  }
  
  .gnb__open-contents > .rankings > div > ol > li:nth-child(-n+3):before {
-  background-color: #333;
+  background-color: var(--main-black);
  }
 
  div.gnb__btn-group {
