@@ -1,0 +1,11 @@
+header {
+ display: flex;
+}
+
+.top-header {
+ display: flex;
+}
+
+.top-header > .search-bar {
+ display: flex;
+}

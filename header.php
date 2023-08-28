@@ -17,4 +17,6 @@
  <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
  <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
  <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+
+ <link rel="shortcut icon" href="../common/assets/img/favicon.png" type="image/x-icon">
 </head>
