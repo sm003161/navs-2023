@@ -1,11 +1,139 @@
-header {
- display: flex;
+:root {
+ --gnb-i-width__pc: 3rem;
+ --black-lignt: #666;
+ --gray-dark: #999;
+ --gray: #DDD;
+ --gray-light: #efefef;
+ --white-dark: #f6f6f6;
 }
 
-.top-header {
- display: flex;
+.bg-darker {
+ filter: brightness(0.9) !important;
 }
 
-.top-header > .search-bar {
+.gnb-icon-btn {
+ width : var(--gnb-i-width__pc) !important;
+ height: 100% !important;
+ border-radius: 50px !important;
+}
+
+
+
+.container-page > header {
+ height: 4rem;
+ padding: 0.5rem 2rem;
+ border-bottom: 1px solid black;
+ display: grid;
+ justify-content: center;
+ align-items: center;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 1rem;
+}
+
+.container-page > header i {
+ font-size: 1.3rem;
+}
+
+.container-page > header > .gnb-group > .gnb-open-btn:hover {
+ background-color: var(--gray-light);
+}
+
+.container-page > header > * {
  display: flex;
+ align-items: center;
+ height: 100%;
+}
+
+.container-page > header > .gnb-group {
+ width: 100%;
+ align-items: center;
+ gap: 0.5rem;
+}
+
+.container-page > header > .gnb-group > .logo {
+ position: relative;
+}
+
+.container-page > header > .gnb-group > .logo,
+.container-page > header > .gnb-group > .logo > i {
+ font-size: 2rem;
+ font-weight: bolder;
+ gap: 0.2rem;
+}
+
+.container-page > header > .gnb-group > .logo > span {
+ font-size: 1rem;
+ vertical-align: top;
+ position: absolute;
+ top: 5%;
+ right: -15%;
+}
+
+.container-page > header > .search-bar > form {
+ border: 1px solid var(--gray);
+ border-radius: 50px;
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 3rem;
+}
+
+.container-page > header > .search-bar > form > input {
+ width: 400px;
+ padding: 1.1rem;
+ border: none;
+}
+
+.container-page > header > .search-bar > form > input:focus {
+ outline: none;
+}
+
+.container-page > header > .search-bar > form > input::placeholder {
+ outline: none;
+ font-size: 1.1rem;
+ color: var(--black-lignt);
+}
+
+.container-page > header > .search-bar > form > .search-bar__keyboard {
+ color: var(--black-lignt);
+ padding: 1.1rem;
+}
+
+.container-page > header > .search-bar > form > .search-bar__keyboard:hover {
+ color: var(--black);
+}
+
+.container-page > header > .search-bar > form > .search-bar__search {
+ padding: 2rem 1.6rem 2rem 1.3rem;
+ background-color: var(--white-dark);
+ border-left: 1px solid var(--gray)
+}
+
+.container-page > header > .search-bar > .search-bar__audio {
+ background-color: var(--white-dark);
+ margin-left: 1rem;
+}
+
+.container-page > header > .search-bar > form > .search-bar__search:hover {
+background-color: var(--gray-light);
+}
+
+.container-page > header > .search-bar > .search-bar__audio:hover {
+ background-color: var(--gray);
+}
+
+.container-page > header > .setting-group {
+ justify-content: right;
+ gap: 1rem;
+}
+
+.container-page > header > .setting-group > .gnb-login {
+ padding: 0.5rem 0.8rem;
+ border-radius: 50px;
+ border: 1px solid var(--gray-light);
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ font-weight: bolder;
 }

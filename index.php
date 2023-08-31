@@ -2,7 +2,7 @@
  include("header.php");
 ?>
 
- <marquee class="notice-container" aria-label="홈페이지 소개">본 페이지는 개인 프로젝트를 위해 제작된 페이지로, 연습을 위해 각종 웹사이트의 헤더를 클로닝해 모으고 있습니다.
+ <marquee class="notice-container" aria-label="홈페이지 소개">본 페이지는 연습을 위해 제작된 페이지로, 각종 웹사이트의 헤더를 Cloning 하고 있습니다.
   <!-- <marquee>본 페이지는 개인 프로젝트를 위해 제작된 페이지로, 연습을 위해 각종 웹사이트의 헤더를 클로닝해 모으고 있습니다.</marquee> -->
  </marquee>
 
