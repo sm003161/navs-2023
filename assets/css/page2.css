@@ -1,4 +1,4 @@
-/* 페이지 내 공통 엘리먼트 */
+/* 페이지 내 공통 엘리먼트
 :root {
  --icon-size: 15px;
  --icon-y-black: 0;
@@ -65,7 +65,8 @@
 }
 
 
-/* 모바일 버전 */
+/* 모바일 버전
+
 .container-page > .top-menu {
  background-color: #666;
 }
@@ -108,14 +109,14 @@
 }
 
 .gnb-menu__btn-group > button:first-child {
- /* display: none; */
+ /* display: none; 
 }
- 
+
 .container-page > header > .header-container > div.gnb-menu__btn-group {
  order: -1;
 }
 
-/* PC 버전 */
+/* PC 버전
 @media (min-width: 700px) {
  .check-mo {
   display: initial !important;
@@ -125,7 +126,7 @@
   padding: 0;
  }
  
- /* 탑 메뉴 */
+ /* 탑 메뉴
  .container-page > .top-menu > .top-menu__container > nav > ul {
   display: flex;
   vertical-align: middle;
@@ -291,7 +292,7 @@
  }
  
  .container-page > header > .header-container > .gnb-menu-container > .gnb-menu > ul > li > .gnb-menu__open > .gnb-menu__open__contents > .gnb-menu__open__intro > .gnb-menu__open__desc {
-  /* border: var(--coding); */
+  /* border: var(--coding);
  }
  
  .container-page > header > .header-container > .gnb-menu-container > .gnb-menu > ul > li > .gnb-menu__open > .gnb-menu__open__contents > .gnb-menu__open__intro > .gnb-menu__open__desc > dt {
@@ -347,3 +348,4 @@
   color: #BBB;
  }
 }
+*/

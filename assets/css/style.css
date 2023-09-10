@@ -3,8 +3,8 @@
 }
 
 .container-index > h1 {
-  font-size: 5rem;
-  margin-bottom: 1rem;
+  font-size: 7rem;
+  margin-bottom: 1.4rem;
 }
 
 .container-index > h1 > .line-break {
@@ -20,18 +20,18 @@
 }
 
 .container-index > nav > ul > li > a.service-list {
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 1.4rem;
+  font-size: 2.1rem;
   font-weight: 600;
   position: relative;
   display: flex;
 }
 
 .back-to-index > a.header-back {
-  font-size: 1.5rem;
+  font-size: 2.1rem;
   font-weight: 200;
   letter-spacing: normal;
-  padding: 0.5rem;
+  padding: 0.7rem;
   background-color: var(--main-black);
   display: flex;
   color: white;
@@ -60,6 +60,7 @@
 
   .container-index > nav > ul > li:nth-child(odd) {
     border-right: 1px solid var(--main-black);
+    /* border-left: 1px solid var(--main-black); */
   }
 
   .container-index > nav > ul {
@@ -72,4 +73,19 @@
   color: white;
  }
 
+}
+
+
+
+
+
+@media (min-width: 1500px) {
+ .container-index > nav > ul > li:nth-child(odd) {
+   border-right: none;
+ }
+ 
+ .container-index > nav > ul > li:nth-child(even) {
+   border-right: 1px solid var(--main-black);
+   border-left: 1px solid var(--main-black);
+ }
 }
